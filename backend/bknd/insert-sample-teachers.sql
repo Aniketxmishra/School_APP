@@ -1,0 +1,253 @@
+-- Insert Sample Teachers into tbmasteacher table
+-- School Management System - Sample Data
+
+USE school_temp;
+
+INSERT INTO tbmasteacher (
+    fdstaffcode, 
+    fdfirstname, 
+    fdlastname, 
+    fdfatherorhusbandname,
+    fdgender, 
+    fddateofbirth, 
+    fdbloodgroup,
+    fdreligion,
+    fdcategory,
+    fdmobile, 
+    fdemail, 
+    fdaddress,
+    fdcity,
+    fdstate,
+    fdpincode,
+    fdjoiningdate,
+    fdaadharno,
+    fdpan,
+    fdqualification,
+    fdexperience,
+    fdstatus,
+    fdcreatedby
+) VALUES 
+-- Mathematics Teacher
+(
+    'TCH001',
+    'Rajesh',
+    'Kumar',
+    'Ram Kumar',
+    'Male',
+    '1985-03-15',
+    'B+',
+    'Hindu',
+    'General',
+    '9876543210',
+    'rajesh.kumar@school.edu',
+    '123 Teachers Colony, Model Town',
+    'Delhi',
+    'Delhi',
+    '110001',
+    '2020-06-01',
+    '123456789012',
+    'ABCDE1234F',
+    'M.Sc Mathematics, B.Ed',
+    5,
+    'active',
+    'admin'
+),
+
+-- English Teacher
+(
+    'TCH002',
+    'Priya',
+    'Sharma',
+    'Suresh Sharma',
+    'Female',
+    '1988-07-22',
+    'A+',
+    'Hindu',
+    'General',
+    '9876543211',
+    'priya.sharma@school.edu',
+    '456 Green Park, Sector 12',
+    'Delhi',
+    'Delhi',
+    '110002',
+    '2019-04-15',
+    '123456789013',
+    'BCDEF2345G',
+    'M.A English Literature, B.Ed',
+    6,
+    'active',
+    'admin'
+),
+
+-- Science Teacher
+(
+    'TCH003',
+    'Amit',
+    'Singh',
+    'Vikram Singh',
+    'Male',
+    '1982-11-08',
+    'O+',
+    'Hindu',
+    'General',
+    '9876543212',
+    'amit.singh@school.edu',
+    '789 Science City, Phase 2',
+    'Delhi',
+    'Delhi',
+    '110003',
+    '2018-08-20',
+    '123456789014',
+    'CDEFG3456H',
+    'M.Sc Physics, B.Ed',
+    8,
+    'active',
+    'admin'
+),
+
+-- Hindi Teacher
+(
+    'TCH004',
+    'Sunita',
+    'Gupta',
+    'Ramesh Gupta',
+    'Female',
+    '1990-01-12',
+    'AB+',
+    'Hindu',
+    'General',
+    '9876543213',
+    'sunita.gupta@school.edu',
+    '321 Hindi Bhawan, Old Delhi',
+    'Delhi',
+    'Delhi',
+    '110004',
+    '2021-03-10',
+    '123456789015',
+    'DEFGH4567I',
+    'M.A Hindi Literature, B.Ed',
+    3,
+    'active',
+    'admin'
+),
+
+-- Physical Education Teacher
+(
+    'TCH005',
+    'Rohit',
+    'Verma',
+    'Sunil Verma',
+    'Male',
+    '1987-05-30',
+    'B-',
+    'Hindu',
+    'OBC',
+    '9876543214',
+    'rohit.verma@school.edu',
+    '654 Sports Complex, Janakpuri',
+    'Delhi',
+    'Delhi',
+    '110005',
+    '2020-01-15',
+    '123456789016',
+    'EFGHI5678J',
+    'M.P.Ed, B.P.Ed',
+    4,
+    'active',
+    'admin'
+),
+
+-- Computer Science Teacher
+(
+    'TCH006',
+    'Neha',
+    'Agarwal',
+    'Ashok Agarwal',
+    'Female',
+    '1992-09-18',
+    'A-',
+    'Hindu',
+    'General',
+    '9876543215',
+    'neha.agarwal@school.edu',
+    '987 Tech Park, Cyber City',
+    'Delhi',
+    'Delhi',
+    '110006',
+    '2022-07-01',
+    '123456789017',
+    'FGHIJ6789K',
+    'MCA, B.Ed',
+    2,
+    'active',
+    'admin'
+),
+
+-- Social Studies Teacher
+(
+    'TCH007',
+    'Vikash',
+    'Pandey',
+    'Shyam Pandey',
+    'Male',
+    '1984-12-25',
+    'O-',
+    'Hindu',
+    'General',
+    '9876543216',
+    'vikash.pandey@school.edu',
+    '147 History Lane, Central Delhi',
+    'Delhi',
+    'Delhi',
+    '110007',
+    '2019-11-05',
+    '123456789018',
+    'GHIJK7890L',
+    'M.A History, B.Ed',
+    7,
+    'active',
+    'admin'
+),
+
+-- Art Teacher
+(
+    'TCH008',
+    'Kavita',
+    'Joshi',
+    'Mohan Joshi',
+    'Female',
+    '1989-04-14',
+    'AB-',
+    'Hindu',
+    'General',
+    '9876543217',
+    'kavita.joshi@school.edu',
+    '258 Art Gallery Road, CP',
+    'Delhi',
+    'Delhi',
+    '110008',
+    '2021-09-12',
+    '123456789019',
+    'HIJKL8901M',
+    'BFA, Diploma in Art Education',
+    4,
+    'active',
+    'admin'
+);
+
+-- Verify the insertion
+SELECT COUNT(*) as 'Total Teachers Added' FROM tbmasteacher;
+
+-- Display all teachers
+SELECT 
+    fdstaffcode as 'Staff Code',
+    CONCAT(fdfirstname, ' ', fdlastname) as 'Full Name',
+    fdgender as 'Gender',
+    fdmobile as 'Mobile',
+    fdemail as 'Email',
+    fdqualification as 'Qualification',
+    fdexperience as 'Experience (Years)',
+    fdjoiningdate as 'Joining Date',
+    fdstatus as 'Status'
+FROM tbmasteacher 
+ORDER BY fdjoiningdate;
