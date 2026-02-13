@@ -1,0 +1,74 @@
+# System, IDE and Environment files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.vscode/
+.idea/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET / C#
+bin/
+obj/
+/backend/bknd/SchoolApp.API/bin/
+/backend/bknd/SchoolApp.API/obj/
+/backend/bknd/SchoolApp.Infrastructure/bin/
+/backend/bknd/SchoolApp.Infrastructure/obj/
+/backend/bknd/SchoolApp.Infrastructure/Migrations/
+Debug/
+Release/
+*.userprefs
+*.pdb
+*.exe
+*.dll
+*.cache
+appsettings.local.json
+appsettings.Development.json
+global.json
+
+# Node / JS / TS / Expo
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+.yarn/
+.pnp.*
+package-lock.json
+yarn.lock
+
+# Expo specific
+.expo/
+dist/
+web-build/
+.eas/
+
+# Python / Scripts
+__pycache__/
+*.pyc
+venv/
+.env
+check_db.py
+db_row_counts.txt
+db_sample_data.txt
+db_tables.txt
+pdf_text.txt
+redis.zip
+PermissionGate.js
+permissionService.js
+permissionService.ts
+usePermissions.js
+tabless.pdf
+RBAC_INTEGRATION_EXAMPLES.md
+
+# Logs
+logs/
+*.log
+
+# Temp files
+*.tmp
+*.bak
+*.swp

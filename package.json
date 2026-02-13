@@ -1,0 +1,30 @@
+{
+  "name": "rbac-permissions",
+  "version": "1.0.0",
+  "description": "Production-ready RBAC module for React Native/Expo apps",
+  "main": "permissionService.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.21.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "@types/react": "^18.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-native": ">=0.60.0"
+  },
+  "keywords": [
+    "rbac",
+    "permissions",
+    "react-native",
+    "expo",
+    "access-control",
+    "role-based"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
