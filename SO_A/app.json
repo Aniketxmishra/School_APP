@@ -1,0 +1,153 @@
+{
+  "expo": {
+    "name": "School Management System",
+    "slug": "school-management-system",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "schoolapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "description": "Complete school management system for students, teachers, and administrators",
+    "keywords": ["school", "education", "management", "student", "teacher", "attendance"],
+    "privacy": "public",
+    "platforms": ["ios", "android", "web"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aniket.schoolmanagement",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses camera to capture student photos and documents",
+        "NSPhotoLibraryUsageDescription": "This app accesses photo library to select images for profiles and assignments",
+        "NSMicrophoneUsageDescription": "This app uses microphone for voice notes and live classes"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#2E86C1"
+      },
+      "package": "com.aniket.schoolmanagement",
+      "versionCode": 1,
+      "compileSdkVersion": 34,
+      "targetSdkVersion": 34,
+      "minSdkVersion": 21,
+      "allowBackup": true,
+      "permissions": [
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE",
+        "ACCESS_NETWORK_STATE",
+        "INTERNET",
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "VIBRATE",
+        "USE_FINGERPRINT",
+        "USE_BIOMETRIC"
+      ],
+      "blockedPermissions": [],
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.aniket.schoolmanagement"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png",
+      "name": "School Management System",
+      "shortName": "SchoolMS",
+      "lang": "en",
+      "scope": "/",
+      "themeColor": "#2E86C1",
+      "backgroundColor": "#ffffff",
+      "display": "standalone",
+      "orientation": "portrait",
+      "dir": "ltr"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#2E86C1"
+        }
+      ],
+      "expo-font",
+      "expo-web-browser",
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow School Management System to access camera for capturing student photos and documents"
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow School Management System to access photo library for profile pictures and assignments",
+          "savePhotosPermission": "Allow School Management System to save photos to your device"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow School Management System to use location for bus tracking and attendance verification"
+        }
+      ],
+      "expo-notifications",
+      [
+        "expo-document-picker",
+        {
+          "iCloudContainerEnvironment": "Production"
+        }
+      ],
+      "expo-file-system",
+      "expo-sharing",
+      "expo-print",
+      "expo-mail-composer"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "82782b17-c17d-40ae-99d2-d28cd0d029dc"
+      }
+    },
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2E86C1"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "notification": {
+      "color": "#2E86C1",
+      "iosDisplayInForeground": true,
+      "androidMode": "default",
+      "androidCollapsedTitle": "School Management System"
+    },
+    "updates": {
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "aniket-school-org",
+            "project": "school-management-system"
+          }
+        }
+      ]
+    }
+  }
+}
